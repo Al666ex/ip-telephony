@@ -1,0 +1,1 @@
+export const onInputUpperCase = (e) => e.target.value = e.target.value.toUpperCase()

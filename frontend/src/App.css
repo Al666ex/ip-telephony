@@ -1,0 +1,234 @@
+:root {  
+  --color-black : black;
+  --color-renderBock : #D3D3D3;
+  --nth-child: #f8f8f8;  
+  --color-white : white;
+  --fontWeight-600: 600;
+  --color-background-main : '#f5f5f5';
+  --color-almost-black : rgba(0, 0, 0, 0.88);  
+  --color-background-navbar : rgb(71, 71, 69);
+  --color-input-focus : blue;
+  --color-delete-person : red;
+  --nth-child: #f8f8f8;  
+  --color-scroll-background : #b9c9c9;
+}
+
+/* Настройка скроллбара */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 0px; /* Оставляем вертикальный скролл, если горизонтальный не нужен */
+}
+
+::-webkit-scrollbar-thumb {  
+  background-color: var(--color-scroll-background);
+  border-radius: 4px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="105" viewBox="0 0 4 105" fill="none"><rect width="4" height="104.43" rx="2" fill="#E8EDED"/></svg>');
+}
+
+::-webkit-scrollbar-track {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="105" viewBox="0 0 4 105" fill="none"><rect width="4" height="104.43" rx="2" fill="#E8EDED"/></svg>');
+  margin-left: 5px; /* Добавляем отступ влево */  
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: var(--color-scroll-background);
+  border-radius: 4px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="105" viewBox="0 0 4 105" fill="none"><rect width="4" height="104.43" rx="2" fill="#E8EDED"/></svg>');
+}
+
+.center{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.main {
+  max-width: 24%;
+  min-width: 400px;
+  margin: 0 auto;  
+  height: 100%;
+  text-align: center;
+  background:  #f5f5f5;
+}
+
+.main_admin {
+  max-width: 50%;
+  min-width: 600px;
+  margin: 0 auto;  
+  height: 100%;
+  text-align: center;
+  background:  #f5f5f5;
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 45px;
+  background-color: var(--color-background-navbar);
+  z-index: 1000;
+}
+
+h1{
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.spinner{
+  height: 3em;
+  width: 3em;
+}
+
+.hide{
+  display: none;
+}
+
+.ant-table-cell-row-hover {
+  background:rgb(223, 223, 235) !important;
+}
+
+tr:nth-child(2n)  {	
+  background: var(--nth-child);
+} 
+
+/* .menu-hidden{
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.menu-visible{
+  width: 100%;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+} */
+
+.container{
+  margin-top: 45px;
+}
+
+.main input[type=text] {
+  /* width: 90%; */
+  padding: 5px;
+  margin:  0;
+  box-sizing: border-box;
+  font-weight: 500;  
+  font-size: x-large;
+  font-style: normal;
+}
+
+input:focus {
+  outline: var(--color-input-focus);
+  border-color: var(--color-input-focus);
+}
+
+.left{
+  flex: 2;
+  padding: 1rem;
+}
+
+/* .right{
+  flex: 1;
+  padding: 1rem;
+} */
+
+ul{
+  text-align: left;
+}
+
+.person{
+  list-style-type: none;
+  padding: 0.4rem;
+  /* font-family: "Lato", sans-serif; */
+  font-weight: 500;
+  font-style: normal;
+}
+
+.person_found {
+  display: block;  
+  transition: border 0.3s ease;  
+  border-radius: 5px;
+}
+
+.person_found:hover {  
+  color: green;
+  background: #dee4e4;  
+}
+
+.last_first_names{  
+  font-weight: bold;
+  font-size: 1.5rem;  
+}
+
+.user{
+  color: var(--color-white);
+  padding-right: 1em;
+  font-size: 14px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+}
+
+.textAlignLeft{
+  text-align: left;
+  width: 100%;
+}
+
+.findPerson{
+  overflow: scroll;
+  height: 645px;  
+}
+
+.scroll-padding {
+  padding-left: 5px; /* Добавляем отступ слева */
+}
+
+:where(.css-dev-only-do-not-override-16dnzbj).ant-menu-horizontal {
+  line-height: 30px;
+}
+
+:where(.css-dev-only-do-not-override-gmnhpe).ant-menu-horizontal {
+  line-height: 30px;
+}
+
+:where(.css-gmnhpe).ant-menu-horizontal {
+  line-height: 30px;
+}
+
+.divider{
+  border-color: var(--color-background-navbar) !important;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+.custom-modal-footer .ant-modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.remove_person{
+  background-color: var(--color-delete-person);
+  color: var(--color-white);
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+}
+
+/* table scroll------------------------------------------ */
+.ant-table-body {
+  scrollbar-width: auto;
+  scrollbar-color: auto;
+}
+
+.ant-table-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.ant-table-body::-webkit-scrollbar-track {
+  background-color: #e1e6e6;
+}
+
+.ant-table-body::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: var(--color-scroll-background);
+}
